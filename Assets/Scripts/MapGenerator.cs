@@ -340,8 +340,8 @@ public class MapGenerator : MonoBehaviour
         maze[(int)spawnPosition.x, (int)spawnPosition.z] = -1;
         maze[(int)goalPos.x, (int)goalPos.z] = -2;
 
-        Debug.Log("Start: " + spawnPosition);
-        Debug.Log("End: " + goalPos);
+        //Debug.Log("Start: " + spawnPosition);
+        //Debug.Log("End: " + goalPos);
 
         bool succeeded = BuildPathConnection(maze, goalPos, spawnPosition, 0);
 
@@ -352,7 +352,7 @@ public class MapGenerator : MonoBehaviour
             {
                 printString += maze[j, i] + " ";
             }
-            Debug.Log(printString);
+            //Debug.Log(printString);
         }
 
                 Assert.IsTrue(succeeded);
@@ -439,7 +439,7 @@ public class MapGenerator : MonoBehaviour
             }
         }
         
-        Debug.Log("PathCompleted");
+        //Debug.Log("PathCompleted");
     }
 
     private bool BuildPathConnection(int[,] maze, Vector3 goalPos, Vector3 currentTile, int tileCount)
